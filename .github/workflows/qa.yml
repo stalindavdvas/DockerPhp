@@ -1,9 +1,6 @@
 name: Deploy HTML Project
 
 on:
-  push:
-    branches:
-      - qa
   pull_request:
     branches:
       - qa
@@ -31,7 +28,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: erickjrm/programhtml2:latest
+          tags: stalinvasco2024/dockerphp:latest
 
   deploy:
     name: Deploy Docker Container to EC2
@@ -41,7 +38,8 @@ jobs:
     strategy:
       matrix:
         ec2_instance: 
-          - ec2-54-161-3-197.compute-1.amazonaws.com
+          - ec2-54-172-62-208.compute-1.amazonaws.com
+          - ec2-44-201-197-207.compute-1.amazonaws.com
 
     steps:
       - name: Set up SSH key
@@ -59,5 +57,5 @@ jobs:
           script: |
             sudo docker stop html_project || true
             sudo docker rm html_project || true
-            sudo docker pull erickjrm/programhtml2:latest
-            sudo docker run -d --name html -p 80:80 erickjrm/programhtml2:latest
+            sudo docker pull stalinvasco2024/dockerphp:latest
+            sudo docker run -d --name html -p 80:80 stalinvasco2024/dockerphp:latest
