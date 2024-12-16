@@ -1,4 +1,6 @@
+
 name: Deploy PHP Project QA
+
 on:
   pull_request:
     branches:
@@ -58,3 +60,4 @@ jobs:
             sudo docker rm php_test || true
             sudo docker pull stalinvasco2024/dockerphp:latest
             sudo docker run -d --name php_test -p 80:80 stalinvasco2024/dockerphp:latest
+
