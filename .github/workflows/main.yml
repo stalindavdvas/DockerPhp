@@ -1,7 +1,6 @@
 
 name: Deploy PHP Project PROD
 
-
 on:
   pull_request:
     branches:
