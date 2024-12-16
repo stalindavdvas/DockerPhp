@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola mi nombre es Stalin Vasco.</h1>
+    <h1>Hola mi nombre es Stalin Vasco. Test</h1>
     <h2><?php echo gethostname();?></h2>
 </body>
 </html>
