@@ -1,3 +1,4 @@
+
 name: Deploy PHP Project PROD
 
 on:
@@ -51,11 +52,12 @@ jobs:
         uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ matrix.ec2_instance }}
-          username: ubuntu
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            sudo docker stop html_project || true
-            sudo docker rm html_project || true
+            sudo docker stop php_test || true
+            sudo docker rm php_test || true
             sudo docker pull stalinvasco2024/dockerphp:latest
-            sudo docker run -d --name html -p 80:80 stalinvasco2024/dockerphp:latest
+            sudo docker run -d --name php_test -p 80:80 stalinvasco2024/dockerphp:latest
+
