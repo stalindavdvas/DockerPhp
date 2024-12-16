@@ -1,4 +1,4 @@
-name: Deploy HTML Project
+name: Deploy PHP Project QA
 
 on:
   pull_request:
