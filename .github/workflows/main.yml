@@ -4,7 +4,7 @@ name: Deploy PHP Project PROD
 on:
   pull_request:
     branches:
-        -main
+      - main
 
 jobs:
   update_docker_image:
