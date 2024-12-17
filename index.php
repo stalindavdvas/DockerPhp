@@ -72,7 +72,7 @@
         <div class="text">
             <h2>Página Stalin Vasco</h2>
             <h4>Host: <?php echo gethostname(); ?></h4>
-            <h4>Prueba de Cambio: Prueba</h4>
+            <h4>Prueba de Cambio: Prueba1</h4>
         </div>
     </div>
 
