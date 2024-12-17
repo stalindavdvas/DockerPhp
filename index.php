@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Página Stalin Vasco</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -33,26 +33,28 @@
         }
     </style>
 </head>
-
 <body>
-   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom w-100">
-        <a class="navbar-brand" href="#">Mi Página</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Página</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -61,12 +63,12 @@
         <img src="img/311268.png" alt="Imagen de computadora" class="img-fluid">
         <div class="text">
             <h2>Página Stalin Vasco</h2>
-            <h4>Host: <?php echo gethostname(); ?></h4>
+            <h4>Host: <?php echo gethostname();?></h4>
             <h4>Prueba de Cambio: Prueba</h4>
         </div>
     </div>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
 
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
