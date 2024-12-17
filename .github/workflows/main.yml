@@ -39,8 +39,8 @@ jobs:
     strategy:
       matrix:
         ec2_instance: 
-          - ec2-18-215-160-82.compute-1.amazonaws.com
-          - ec2-3-82-17-220.compute-1.amazonaws.com
+          - ec2-3-237-3-139.compute-1.amazonaws.com
+          - ec2-54-175-196-249.compute-1.amazonaws.com
 
     steps:
       - name: Set up SSH key
@@ -56,8 +56,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            sudo docker stop php_test || true
-            sudo docker rm php_test || true
+            sudo docker stop dockerphp || true
+            sudo docker rm dockerphp || true
             sudo docker pull stalinvasco2024/dockerphp:latest
-            sudo docker run -d --name php_test -p 80:80 stalinvasco2024/dockerphp:latest
+            sudo docker run -d --name dockerphp -p 80:80 stalinvasco2024/dockerphp:latest
 
